@@ -252,7 +252,24 @@ A.txt, B.txt 둘다 working directory에서 수정했다는 사실은 같지만,
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 
+git add 더 자세히 알아보기
 
+먼저 calculator.py 맨 윗줄에 # 계산기 이런 주석을 달아주자 그런다음 파일저장 
+License 파일도 열어서 맨 윗줄에 # 라이센스 이렇게 적어주고 저장하자 그리고 터미널로 간다 방금 우리는 파일 두개를 수정했다 그럼 git add를 두번해야한다 하지만 일부러 파일 1개만 git add를 해보자 
+calculator.py 만 git add를 해보자 -> git add calculator.py 이러면 calculator.py가 staging area 에 올라간다 이 상태에서 커밋을 한다하면 calculator.py 만 주석이 추가된 버전 
+그리고 License 는 이전의 주석이 없는 버전이 커밋에 반영될거다 정말 그렇게 되는지 확인해볼 수 있는데 git status 하고 엔터를 치자
+->
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   calculator.py
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   License
+
+git의 현재 상태가 출력된다 말 그대로 git이 인식하고 있는 프로젝트 디렉토리의 현재 상태를 보여준다 크게 두가지 부분으로 되어있는데
 
 
 
