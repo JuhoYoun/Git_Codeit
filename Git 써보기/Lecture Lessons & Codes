@@ -18,3 +18,46 @@ commit
 
 정리하자면 프로젝트 디렉토리의 특정 모습을 하나의 버전으로 남기는 행위 그리고 그 결과물을 커밋이라고 하고 이 커밋이 저장되는 곳을 레포지토리라고 한다 
 ---------------------------------------------------------------------------------------------------------------------------------------------
+
+repository 만들기 
+
+이제부터 프로젝트 하나를 시작해보자 수학 계산기 프로그램을 만들어볼거다 그리고 이 프로젝트를 진행하면서 git을 사용할거다 일단 프로젝트를 위해 MathTool이란 디렉토리를 만들거다 -> mkdir MathTool
+이제 이 디렉토리 안에서 프로젝트에 필요한 각종 파일과 자식 디렉토리를 만들것이다 그러면 이 MathTool 디렉토리가 프로젝트 디렉토리가 되는것이다 그리고 git으로 이 프로젝트 디렉토리의 버전관리를 할것이다 
+근데 그러려면 어떤 설정이 필요하다 프로젝트 디렉토리로 가서 git init 이라고 치고 엔터를 누른다 
+->
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /Users/jutlo/code_it_git/.git/
+이렇게 뜬다
+
+여기서 git은 우리가 git으로 어떤 작업을 할 때마다 써야하는 커맨드이고 이 git이라는 단어 뒤애 어떤 커맨드를 붙이느냐에 따라 하게 되는 작업이 달라진다 지금은 이렇게 git init이라고 했는데 
+이렇게 하면 위에 처럼 Initialized empty Git repository in /Users/jutlo/code_it_git/.git/ 이렇게 결과가 출력되는데 이 문장은 비어있는 레포지토리를 생성했다는 의미이다 
+실재로 어떤 일이 생겼는지 확인해보자 -> ls -al  -> .git 이라는 디렉토리가 생긴것을 확인할 수 있다 이게 바로 레포지토리이다 이 안으로 들어가보자 -> cd .git 
+그리고 뭐가 들었는지 확인해보자 -> cd -al
+->
+total 24
+drwxr-xr-x   9 jutlo  staff  288 Mar 29 10:52 .
+drwxr-xr-x   4 jutlo  staff  128 Mar 29 10:52 ..
+-rw-r--r--   1 jutlo  staff   23 Mar 29 10:52 HEAD
+-rw-r--r--   1 jutlo  staff  137 Mar 29 10:52 config
+-rw-r--r--   1 jutlo  staff   73 Mar 29 10:52 description
+drwxr-xr-x  15 jutlo  staff  480 Mar 29 10:52 hooks
+drwxr-xr-x   3 jutlo  staff   96 Mar 29 10:52 info
+drwxr-xr-x   4 jutlo  staff  128 Mar 29 10:52 objects
+drwxr-xr-x   4 jutlo  staff  128 Mar 29 10:52 refs
+
+이게 다 무엇이냐? git은 프로젝트 디렉토리 안에 버전관리를 하기 위해서 자신만의 규칙을 가지고 복잡한 작업을 처리한다 여기 보이는 것들은 모두 그 작업을 하기위해 사용되는 것들이다 
+git을 사용할 때 여기있는 것들이 각각 어떤 역할을 하는지 모두 알 필요는 없다 지금은 그냥 이 공간이 레포지토리이고 여기서 git 이 어떤 복잡한 작업을 하면서 버전관리를 한다는 것을 기억하자
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
