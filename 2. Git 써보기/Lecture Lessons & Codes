@@ -269,7 +269,23 @@ Changes not staged for commit:
   (use "git restore <file>..." to discard changes in working directory)
 	modified:   License
 
-git의 현재 상태가 출력된다 말 그대로 git이 인식하고 있는 프로젝트 디렉토리의 현재 상태를 보여준다 크게 두가지 부분으로 되어있는데
+git의 현재 상태가 출력된다 말 그대로 git이 인식하고 있는 프로젝트 디렉토리의 현재 상태를 보여준다 크게 두가지 부분으로 되어있는데 첫번째는 Changes to be committed: 라고 되있는 부분이다 
+이 말은 커밋에 반영될 변경사항을 말한다 두번째로는 Changes not staged for commit: 라고 되있는 부분인데 여기서 staged 라는건 git add로 파일을 스테이징 에리어에 추가하는 동작을 말한다 
+그러니까 변경사항은 있었지만 git add를 하지 않아서 스테이징 에리어에 추가되지 않은 파일을 말한다 git status 를 보면 calculator.py 는 주석이 추가된 새 모습으로 그리고 License 파일은 이전의 모습으로
+커밋에 반영될 거라는걸 확인할 수 있다 이제 License 도 staging area에 추가해보자 -> git add License  그리고 다시 git status 해주자 
+->
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   License
+	modified:   calculator.py
+
+이렇게 나온다~
+
+
+
+
+
 
 
 
