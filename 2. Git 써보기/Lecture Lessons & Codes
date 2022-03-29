@@ -102,7 +102,21 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 
 
+에러 메세지처럼 뜨는데 마지막 줄을 보면 커밋을 하기 위해 add된게 하나도 없고 untracked 상태인 파일들이 존재한다는 문구가 보인다 
+untracked 는 git에 의해서 아직 추적되지 않고 있다 이런 뜻인데 아직 git으로 뭔가를 해준적이 없어서 파일이 버전 관리 대상이 아닐 때 이런 상태를 untracked 라고 한다
+그렇다면 add는 뭘까? 커밋에대해 중요한 사실이 하나 있는데 커밋을 하기 전에는 커밋을 할 파일들을 미리 지정해줘야한다 그러니까 파일을 새로 생성하거나 원래있던 파일의 내용들을 수정하고 나면 
+그 파일들은 새로운 모습으로 커밋에 포함될거라고 지정을 하는건데 이 작업을 해야 그 후에 커밋을 할 수 있다 이런 사전 작업을 add라고 한다 
+add 는 이렇게 쓴다
+-> 
+git add calculator.py 이렇게 하면 calculator.py 가 커밋에 반영될 파일로 지정됬다
 
-
-
+License 파일도 추가해주자 -> git add License
+자 이제 다시 커밋해보자 -> git commit -m "Create calculator.py and License"
+->
+[master (root-commit) 292b059] Create calculator.py and License
+ 2 files changed, 6 insertions(+)
+ create mode 100644 MathTool/License
+ create mode 100644 MathTool/calculator.py
+ 
+ 아까와는 좀 다르게 출력된다
 
