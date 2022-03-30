@@ -282,12 +282,59 @@ Changes to be committed:
 
 이렇게 나온다~
 
+자 이번에는 파일말고 디렉토리를 하나 추가해주자 calculator.py의 코드에 대한 회의 내용을 담을 디렉토리를 하나 추가하겠다 -> mkdir meeting-log
+그리고 이 디렉토리로 이동한 다음 day1 과 day2 라는 파일을 만들자 -> touch day1 그리고 touch day2 
+그리고 다시 부모 디렉토리로 가자 방금 생성한 meeting-log 디렉토리도 커밋에 반영하고 싶은데 그럼 그냥 git add meeting-log/  이렇게 써주면 된다 (뒤에 /가 붙네)
+git status
+->
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   License
+	modified:   calculator.py
+	new file:   meeting-log/day1
+	new file:   meeting-log/day2
 
+방금 처럼 디렉토리를 git add 해주면 그 디렉토리 안에 있는 모든 파일이 스테이징 에리어에 추가된다
 
+git add 애 대해 마지막으로 한가지만 더 해보자 우리가 개발을 하다보면 파일을 여러개 수정하고 커밋해야 되는 경우가 있다 그럼 이럴 때마다 수정한 모든 파일에 대해 git add를 해줘야하는데 좀 불편하다
+이럴 때 변경 사항이 있는 모든 파일을 한번에 스테이징 에리어에 추가하는 방법이 있다 한번 해보자 일단 calculator.py와 License 파일의 주석을 조금 수정하자 주석 맨 앞에 기본을 붙인 후 각자 저장한다
+git status 
+->
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   License
+	modified:   calculator.py
+	new file:   meeting-log/day1
+	new file:   meeting-log/day2
 
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   License
+	modified:   calculator.py
+	
+그러면 우리가 수정한 두 파일이 아직 스테이징 에리어에 추가되어 있지 않다고 뜬다 이럴 때 한꺼번에 할 수 있는 꿀팁이 있다 -> git add .
+이 git add . 는 프로젝트 디렉토리 내의 변경 사항이 생긴 모든 파일들을 스테이징 에리어에 추가하라는 뜻이다 실행하고 git status 를 해보자 
+->
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   License
+	modified:   calculator.py
+	new file:   meeting-log/day1
+	new file:   meeting-log/day2
 
+자 모두 스테이징 에리어에 올라갔다 커밋해주자 ->  git commit -m "Add title comment and Create meeting-log"
+->
+[master 1fb3391] Add title comment and Create meeting-log
+ 4 files changed, 2 insertions(+)
+ create mode 100644 MathTool/meeting-log/day1
+ create mode 100644 MathTool/meeting-log/day2
 
-
+잘됬다~
+---------------------------------------------------------------------------------------------------------------------------------
 
 
 
