@@ -79,4 +79,18 @@ https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/c
 
 
 <Select scopes> 에서 repo 는 다 체크해주시고 필요 필요하시면 Delete_repo 권한까지 체크해주시면 될 것 같아용
+
+
+
+
+인증이 패스워드 방식에서 토큰 방식으로 바뀌었습니다.
+
+https://github.com/settings/tokens
+
+또는
+
+Settings -> Developer settings -> Personal access tokens 에서
+
+repo 와 workflow 정도 선택 하신 후에 진행하시면 문제없이 하실 수 있을거에요
+
 -------------------------------------------------------------------------------------------------------------------------------------------
