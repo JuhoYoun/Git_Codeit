@@ -54,3 +54,29 @@ git push -u origin main
 내가 인증된 사용자여만 하는것이다 기텁 유저네임과 비번을 입력해주자
 ->
 
+-----------------------------------------------------------------------------------------------------------------------
+
+git remote add origin https://github.com/JuhoYoun/Math_Box.git
+git branch -M main
+git push -u origin main
+
+
+강의와는 입력하라는 코드가 조금 다른데 순서대로 입력하고 아이디와 패스워드를 입력하면 아래와 같은 에러 메제지가 뜹니다
+
+무엇이 문제인가요?
+
+
+remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
+remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
+fatal: Authentication failed for 'https://github.com/JuhoYoun/Math_Box.git/'
+
+
+깃헙 인증방식이 변경되어서인데용,
+
+https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
+
+요 링크를 참고해서 token 생성 후 인증해보시면 좋겠습니당
+
+
+<Select scopes> 에서 repo 는 다 체크해주시고 필요 필요하시면 Delete_repo 권한까지 체크해주시면 될 것 같아용
+-------------------------------------------------------------------------------------------------------------------------------------------
